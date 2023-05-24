@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GovandaController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pegawai' ,[GovandaController::class, 'index'] )->name('pegawai');
+Route::get('/pegawai' ,[EmployeeController::class, 'index'] )->name('pegawai');
 
-Route::get('/tambahpegawai' ,[GovandaController::class, 'tambahpegawai'] )->name('tambahpegawai');
-Route::post('/insertdata' ,[GovandaController::class, 'insertdata'] )->name('insertdata');
+Route::get('/tambahpegawai' ,[EmployeeController::class, 'tambahpegawai'] )->name('tambahpegawai');
+Route::post('/insertdata' ,[EmployeeController::class, 'insertdata'] )->name('insertdata');
 
-Route::get('/tampilkandata/{id}' ,[GovandaController::class, 'tampilkandata'] )->name('tampilkandata');
-Route::post('/updatedata/{id}' ,[GovandaController::class, 'updatedata'] )->name('updatedata');
+Route::get('/tampilkandata/{id}' ,[EmployeeController::class, 'tampilkandata'] )->name('tampilkandata');
+Route::post('/updatedata/{id}' ,[EmployeeController::class, 'updatedata'] )->name('updatedata');
 
-Route::get('/delete/{id}' ,[GovandaController::class, 'delete'] )->name('delete');
+Route::get('/delete/{id}' ,[EmployeeController::class, 'delete'] )->name('delete');
