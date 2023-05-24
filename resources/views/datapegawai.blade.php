@@ -1,13 +1,13 @@
 @extends('layout')
 
-@section('content1')
+@section('content')
 
 <div class="card bg-light border-0 shadow-lg">
     <div class="card-body">
       <h1 class="text-center mb-4 mt-4 text-dark display-4 fw-bold">DATA PEGAWAI</h1>
     </div>
   </div>
-  
+
 
 <div class="container mt-5">
     <a href="/tambahpegawai" class="btn btn-outline-success">Tambah Data</a>
@@ -38,16 +38,16 @@
                 <tr>
                     <th scope="row">{{ $no++ }}</th>
                     <td>{{ $row->nama }}</td>
-                    <td>{{ $row->jeniskelamin }}</td>
+                    <td>{{ $row->jenis_kelamin }}</td>
                     <td>0{{ $row->notelpon }}</td>
                     <td>{{ $row->created_at->format('D M Y')}}</td>
                     <td>
                         <a href="/tampilkandata/{{ $row->id  }}" class="btn btn-outline-warning">Edit</a>
                         <a href="/delete/{{ $row->id  }}" class="btn btn-outline-danger">Delete</a>
                     </td>
-                  </tr>  
+                  </tr>
                 @endforeach
-              
+
             </tbody>
           </table>
     </div>
@@ -62,10 +62,9 @@
      </div>
      <div class="card-body">
         <h5 class="card-title">WEB PROGRAMMING</h5>
-        <p class="card-text">GOVANDA DIKRA PRATAMA_065120026</p>
      </div>
      <div class="card-footer text-muted">
-        copyright.2023 
+        copyright.2023
      </div>
   </div>
 </footer>

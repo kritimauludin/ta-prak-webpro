@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('content2')
+@section('content')
 <div class="card bg-light border-0 shadow-lg">
   <div class="card-body">
     <h1 class="text-center mb-4 mt-4 text-dark display-4 fw-bold">TAMBAH DATA PEGAWAI</h1>
@@ -9,7 +9,7 @@
 
 
 <div class="container">
-  
+
   <div class="row justify-content-center mt-4">
       <div class="col-8">
           <div class="card">
@@ -22,7 +22,7 @@
                       </div>
                       <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                        <select class="form-select" name="jeniskelamin" aria-label="Default select example">
+                        <select class="form-select" name="jenis_kelamin" aria-label="Default select example">
                           <option selected>Pilih Jenis Kelamin</option>
                           <option value="cowo">cowo</option>
                           <option value="cewe">cewe</option>
@@ -32,19 +32,19 @@
                         <label for="exampleInputEmail1" class="form-label">No Telepon</label>
                         <input type="number" name="notelpon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                       </div>
-                     
+
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
               </div>
           </div>
       </div>
-         
-  </div>
-</div> 
-@endsection
-   
 
-  
+  </div>
+</div>
+@endsection
+
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -69,7 +69,7 @@
           <p class="card-text">GOVANDA DIKRA PRATAMA_065120026</p>
        </div>
        <div class="card-footer text-muted">
-          copyright.2023 
+          copyright.2023
        </div>
     </div>
   </footer>
