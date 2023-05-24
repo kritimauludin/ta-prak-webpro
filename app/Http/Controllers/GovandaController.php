@@ -18,19 +18,24 @@ class GovandaController extends Controller
     }
     public function insertdata(Request $request){
        // dd($request->all());
-        Govanda::create($request->all());
+        $data = Govanda::create($request->all());
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotopegawai/' , $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
         return redirect()->route('pegawai')->with('success','data berhasil di tambahkan');
-        
+
     }
 
     public function tampilkandata($id){
-      $data = Govanda::find($id);  
+      $data = Govanda::find($id);
       //dd($data);
       return view('tampildata', compact('data'));
     }
 
     public function updatedata(Request $request, $id){
-        $data = Govanda::find($id); 
+        $data = Govanda::find($id);
         $data->update($request->all());
         return redirect()->route('pegawai')->with('success','data berhasil di update');
     }

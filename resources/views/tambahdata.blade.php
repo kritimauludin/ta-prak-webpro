@@ -9,7 +9,7 @@
 
 
 <div class="container">
-  
+
   <div class="row justify-content-center mt-4">
       <div class="col-8">
           <div class="card">
@@ -32,19 +32,24 @@
                         <label for="exampleInputEmail1" class="form-label">No Telepon</label>
                         <input type="number" name="notelpon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                       </div>
-                     
+
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Masukkan Foto</label>
+                        <input type="file" name="foto" class="form-control" >
+                      </div>
+
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
               </div>
           </div>
       </div>
-         
-  </div>
-</div> 
-@endsection
-   
 
-  
+  </div>
+</div>
+@endsection
+
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -69,7 +74,7 @@
           <p class="card-text">GOVANDA DIKRA PRATAMA_065120026</p>
        </div>
        <div class="card-footer text-muted">
-          copyright.2023 
+          copyright.2023
        </div>
     </div>
   </footer>

@@ -14,11 +14,9 @@ use App\Http\Controllers\GovandaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/pegawai' ,[GovandaController::class, 'index'] )->name('pegawai');
+
+Route::get('/' ,[GovandaController::class, 'index'] )->name('pegawai');
 
 Route::get('/tambahpegawai' ,[GovandaController::class, 'tambahpegawai'] )->name('tambahpegawai');
 Route::post('/insertdata' ,[GovandaController::class, 'insertdata'] )->name('insertdata');
